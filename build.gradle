@@ -1,0 +1,95 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://www.dimdev.org/maven/'
+        }
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.tweaker-client'
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+def travisBuildNumber = System.getenv('TRAVIS_BUILD_NUMBER')
+def versionSuffix = travisBuildNumber != null ? travisBuildNumber : 'SNAPSHOT'
+
+group 'org.dimdev.logslabs'
+version '1.0.0-' + versionSuffix
+archivesBaseName = 'LogSlabs'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    ivy {
+        url 'https://libraries.minecraft.net/'
+        layout 'pattern', {
+            artifact '[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier])(.[ext])'
+            m2compatible = true
+        }
+    }
+    maven {
+        url 'https://www.dimdev.org/maven/'
+    }
+    maven {
+        url = 'https://repo.spongepowered.org/maven/'
+    }
+}
+
+dependencies {
+    implementation 'org.dimdev.rift:Rift:1.0.0-SNAPSHOT:dev'
+
+    implementation('org.spongepowered:mixin:0.7.11-SNAPSHOT') { transitive = false }
+    implementation('net.minecraft:launchwrapper:1.11') { transitive = false }
+
+    implementation 'org.lwjgl:lwjgl:3.1.6:natives-linux'
+    implementation 'org.lwjgl:lwjgl:3.1.6:natives-macos'
+    implementation 'org.lwjgl:lwjgl:3.1.6:natives-windows'
+}
+
+configurations {
+    runtime.exclude module: 'launchwrapper'
+    runtime.exclude module: 'lwjgl'
+}
+
+minecraft {
+    version = '1.13-pre5'
+    mappings = 'snapshot_2'
+    runDir = 'run'
+    tweakClass = 'org.dimdev.simpleloader.launch.SimpleLoaderTweaker'
+    makeObfSourceJar = false
+}
+
+reobf {
+    jar {
+        mappingType = 'NOTCH'
+        classpath = sourceSets.main.compileClasspath
+    }
+    shadowJar {
+        mappingType = 'NOTCH'
+        classpath = sourceSets.main.compileClasspath
+    }
+}
+
+shadowJar {
+    exclude 'LICENSE.txt', 'dummyThing'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives jar
+    archives shadowJar
+    archives sourcesJar
+}
+
+runClient.group 'other' // This is broken

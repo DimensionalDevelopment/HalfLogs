@@ -1,0 +1,10 @@
+{
+  "id": "logslabs",
+  "name": "Log Slabs",
+  "authors": [
+    "Runemoro"
+  ],
+  "listeners": [
+    "org.dimdev.logslabs.LogSlabs"
+  ]
+}
