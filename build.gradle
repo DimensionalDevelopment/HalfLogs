@@ -18,9 +18,9 @@ apply plugin: 'com.github.johnrengelman.shadow'
 def travisBuildNumber = System.getenv('TRAVIS_BUILD_NUMBER')
 def versionSuffix = travisBuildNumber != null ? travisBuildNumber : 'SNAPSHOT'
 
-group 'org.dimdev.logslabs'
+group 'org.dimdev.halflogs'
 version '1.0.0-' + versionSuffix
-archivesBaseName = 'LogSlabs'
+archivesBaseName = 'HalfLogs'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "halflogs:block/birch_log_slab" },
+        "type=top": { "model": "halflogs:block/birch_log_slab_top" },
+        "type=double": { "model": "block/birch_log" }
+    }
+}

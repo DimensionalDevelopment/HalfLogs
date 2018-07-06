@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:acacia_log"
+      "item": "minecraft:birch_log"
     }
   },
   "result": {
-    "item": "logslabs:acacia_log_slab",
+    "item": "halflogs:birch_log_slab",
     "count": 6
   }
 }

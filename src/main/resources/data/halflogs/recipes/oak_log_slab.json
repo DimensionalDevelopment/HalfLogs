@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:spruce_log"
+      "item": "minecraft:oak_log"
     }
   },
   "result": {
-    "item": "logslab:spruce_log_slab",
+    "item": "halflogs:oak_log_slab",
     "count": 6
   }
 }

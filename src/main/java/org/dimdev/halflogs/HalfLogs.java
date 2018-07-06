@@ -1,4 +1,4 @@
-package org.dimdev.logslabs;
+package org.dimdev.halflogs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import org.dimdev.rift.listener.BlockAdder;
 import org.dimdev.rift.listener.ItemAdder;
 
-public class LogSlabs implements BlockAdder, ItemAdder {
+public class HalfLogs implements BlockAdder, ItemAdder {
     Block OAK_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F));
     Block SPRUCE_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F));
     Block BIRCH_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F));
@@ -19,12 +19,12 @@ public class LogSlabs implements BlockAdder, ItemAdder {
 
     @Override
     public void registerBlocks(BlockRegistrationReceiver receiver) {
-        receiver.registerBlock(new ResourceLocation("logslabs:oak_log_slab"), OAK_LOG_SLAB);
-        receiver.registerBlock(new ResourceLocation("logslabs:spruce_log_slab"),  SPRUCE_LOG_SLAB);
-        receiver.registerBlock(new ResourceLocation("logslabs:birch_log_slab"), BIRCH_LOG_SLAB);
-        receiver.registerBlock(new ResourceLocation("logslabs:jungle_log_slab"), JUNGLE_LOG_SLAB);
-        receiver.registerBlock(new ResourceLocation("logslabs:acacia_log_slab"), ACACIA_LOG_SLAB);
-        receiver.registerBlock(new ResourceLocation("logslabs:dark_oak_log_slab"), DARK_OAK_LOG_SLAB);
+        receiver.registerBlock(new ResourceLocation("halflogs:oak_log_slab"), OAK_LOG_SLAB);
+        receiver.registerBlock(new ResourceLocation("halflogs:spruce_log_slab"),  SPRUCE_LOG_SLAB);
+        receiver.registerBlock(new ResourceLocation("halflogs:birch_log_slab"), BIRCH_LOG_SLAB);
+        receiver.registerBlock(new ResourceLocation("halflogs:jungle_log_slab"), JUNGLE_LOG_SLAB);
+        receiver.registerBlock(new ResourceLocation("halflogs:acacia_log_slab"), ACACIA_LOG_SLAB);
+        receiver.registerBlock(new ResourceLocation("halflogs:dark_oak_log_slab"), DARK_OAK_LOG_SLAB);
     }
 
     @Override

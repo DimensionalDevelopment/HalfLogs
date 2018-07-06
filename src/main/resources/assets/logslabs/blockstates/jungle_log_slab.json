@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "logslabs:block/jungle_log_slab" },
-        "type=top": { "model": "logslabs:block/jungle_log_slab_top" },
-        "type=double": { "model": "block/jungle_log" }
-    }
-}
