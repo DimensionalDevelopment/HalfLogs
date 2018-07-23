@@ -3,6 +3,7 @@
   "name": "Half Logs",
   "authors": [
     "Runemoro"
+    "CaptainKyros"
   ],
   "listeners": [
     "org.dimdev.halflogs.HalfLogs"

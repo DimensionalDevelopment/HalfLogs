@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {stripped_spruce_log"
+    }
+  },
+  "result": {
+    "item": "halflogs:stripped_spruce_log_slab",
+    "count": 6
+  }
+}
