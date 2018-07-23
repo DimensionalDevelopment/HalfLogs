@@ -39,7 +39,6 @@ public class HalfLogs implements BlockAdder, ItemAdder {
         Block.registerBlock(new ResourceLocation("halflogs:stripped_jungle_log_slab"), STRIPPED_JUNGLE_LOG_SLAB);
         Block.registerBlock(new ResourceLocation("halflogs:stripped_acacia_log_slab"), STRIPPED_ACACIA_LOG_SLAB);
         Block.registerBlock(new ResourceLocation("halflogs:stripped_dark_oak_log_slab"), STRIPPED_DARK_OAK_LOG_SLAB);
-
     }
 
     @Override
