@@ -4,5 +4,11 @@
   "block.halflogs.birch_log_slab": "Birch Log Slab",
   "block.halflogs.jungle_log_slab": "Jungle Log Slab",
   "block.halflogs.acacia_log_slab": "Acacia Log Slab",
-  "block.halflogs.dark_oak_log_slab": "Dark Oak Log Slab"
+  "block.halflogs.dark_oak_log_slab": "Dark Oak Log Slab",
+  "block.halflogs.stripped_oak_log_slab": "Stripped Oak Log Slab",
+  "block.halflogs.stripped_spruce_log_slab": "Stripped Spruce Log Slab",
+  "block.halflogs.stripped_birch_log_slab": "Stripped Birch Log Slab",
+  "block.halflogs.stripped_jungle_log_slab": "Stripped Jungle Log Slab",
+  "block.halflogs.stripped_acacia_log_slab": "Stripped Acacia Log Slab",
+  "block.halflogs.stripped_dark_oak_log_slab": "Stripped Dark Oak Log Slab"
 }
