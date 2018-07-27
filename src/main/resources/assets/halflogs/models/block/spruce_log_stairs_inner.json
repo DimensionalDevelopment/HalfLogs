@@ -1,0 +1,9 @@
+{
+    "parent": "halflogs:block/log_stairs_inner",
+    "textures": {
+        "bottom": "block/spruce_log_top",
+        "top": "block/spruce_log_top",
+        "side": "block/spruce_log",
+		"core": "halflogs:block/spruce_log_core"
+    }
+}

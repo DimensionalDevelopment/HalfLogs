@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "halflogs:oak_log_stairs"
+    ]
+  },
+  "criteria": {
+    "has_logs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:oak_logs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "halflogs:oak_log_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logs",
+      "has_the_recipe"
+    ]
+  ]
+}

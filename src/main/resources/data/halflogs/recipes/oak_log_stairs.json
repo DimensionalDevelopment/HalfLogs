@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:oak_log"
+    }
+  },
+  "result": {
+    "item": "halflogs:oak_log_stairs",
+    "count": 4
+  }
+}
