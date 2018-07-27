@@ -10,5 +10,18 @@
   "block.halflogs.stripped_birch_log_slab": "Stripped Birch Log Slab",
   "block.halflogs.stripped_jungle_log_slab": "Stripped Jungle Log Slab",
   "block.halflogs.stripped_acacia_log_slab": "Stripped Acacia Log Slab",
-  "block.halflogs.stripped_dark_oak_log_slab": "Stripped Dark Oak Log Slab"
+  "block.halflogs.stripped_dark_oak_log_slab": "Stripped Dark Oak Log Slab",
+  
+  "block.halflogs.oak_log_stairs": "Oak Log Stairs",
+  "block.halflogs.spruce_log_stairs": "Spruce Log Stairs",
+  "block.halflogs.birch_log_stairs": "Birch Log Stairs",
+  "block.halflogs.jungle_log_stairs": "Jungle Log Stairs",
+  "block.halflogs.acacia_log_stairs": "Acacia Log Stairs",
+  "block.halflogs.dark_oak_log_stairs": "Dark Oak Log Stairs",
+  "block.halflogs.stripped_oak_log_stairs": "Stripped Oak Log Stairs",
+  "block.halflogs.stripped_spruce_log_stairs": "Stripped Spruce Log Stairs",
+  "block.halflogs.stripped_birch_log_stairs": "Stripped Birch Log Stairs",
+  "block.halflogs.stripped_jungle_log_stairs": "Stripped Jungle Log Stairs",
+  "block.halflogs.stripped_acacia_log_stairs": "Stripped Acacia Log Stairs",
+  "block.halflogs.stripped_dark_oak_log_stairs": "Stripped Dark Oak Log Stairs"
 }

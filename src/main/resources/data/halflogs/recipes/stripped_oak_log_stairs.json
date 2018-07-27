@@ -1,7 +1,9 @@
 {
   "type": "crafting_shaped",
-  "group": "wooden_slab",
+  "group": "wooden_stairs",
   "pattern": [
+    "#  ",
+    "## ",
     "###"
   ],
   "key": {
@@ -10,7 +12,7 @@
     }
   },
   "result": {
-    "item": "halflogs:stripped_oak_log_slab",
-    "count": 6
+    "item": "halflogs:stripped_oak_log_stairs",
+    "count": 4
   }
 }
