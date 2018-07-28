@@ -26,7 +26,6 @@ public class HalfLogs implements BlockAdder, ItemAdder {
     private static Supplier<BlockStairs> LOG_STAIRS = () -> {
         Block block = Blocks.OAK_LOG;
 
-
         return new BlockStairs(block.getDefaultState(), Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD)) {
             @Override
             protected void addPropertiesToBuilder(StateContainer.Builder<Block,IBlockState> p_Builder) {
@@ -41,7 +40,6 @@ public class HalfLogs implements BlockAdder, ItemAdder {
                 iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.func_196000_l().getAxis());
                 return iblockstate;
             }
-
         };
     };
 
