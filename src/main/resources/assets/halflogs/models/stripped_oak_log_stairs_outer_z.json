@@ -1,0 +1,9 @@
+{
+    "parent": "halflogs:block/log_stairs_outer",
+    "textures": {
+        "bottom": "block/stripped_oak_log_top",
+        "top": "block/stripped_oak_log_top",
+        "side": "block/stripped_oak_log",
+		"core": "halflogs:block/stripped_oak_log_core"
+    }
+}

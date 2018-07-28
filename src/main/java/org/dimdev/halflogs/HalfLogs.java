@@ -6,9 +6,14 @@ import net.minecraft.block.BlockStairs;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.state.EnumProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import org.dimdev.rift.listener.BlockAdder;
 import org.dimdev.rift.listener.ItemAdder;
@@ -16,11 +21,27 @@ import org.dimdev.rift.listener.ItemAdder;
 import java.util.function.Supplier;
 
 public class HalfLogs implements BlockAdder, ItemAdder {
+    public static final EnumProperty<EnumFacing.Axis> AXIS = EnumProperty.<EnumFacing.Axis>create("axis", EnumFacing.Axis.class);
 
     private static Supplier<BlockStairs> LOG_STAIRS = () -> {
         Block block = Blocks.OAK_LOG;
 
+
         return new BlockStairs(block.getDefaultState(), Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD)) {
+            @Override
+            protected void addPropertiesToBuilder(StateContainer.Builder<Block,IBlockState> p_Builder) {
+                super.addPropertiesToBuilder(p_Builder);
+                p_Builder.addProperties(AXIS);
+            }
+
+            @Override
+            public IBlockState getBlockToPlaceOnUse(BlockItemUseContext p_getBlockToPlaceOnUse_1_)
+            {
+                IBlockState iblockstate = super.getBlockToPlaceOnUse(p_getBlockToPlaceOnUse_1_);
+                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.func_196000_l().getAxis());
+                return iblockstate;
+            }
+
         };
     };
 
