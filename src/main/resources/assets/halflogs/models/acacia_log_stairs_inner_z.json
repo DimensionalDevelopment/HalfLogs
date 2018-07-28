@@ -1,0 +1,9 @@
+{
+    "parent": "halflogs:block/log_stairs_inner",
+    "textures": {
+        "bottom": "block/acacia_log_top",
+        "top": "block/acacia_log_top",
+        "side": "block/acacia_log",
+		"core": "halflogs:block/acacia_log_core"
+    }
+}
