@@ -43,20 +43,39 @@ public class HalfLogs implements BlockAdder, ItemAdder {
         };
     };
 
+    private static Supplier<BlockSlab> LOG_SLABS = () -> {
+
+        return new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD)) {
+            @Override
+            protected void addPropertiesToBuilder(StateContainer.Builder<Block,IBlockState> p_Builder) {
+                super.addPropertiesToBuilder(p_Builder);
+                p_Builder.addProperties(AXIS);
+            }
+
+            @Override
+            public IBlockState getBlockToPlaceOnUse(BlockItemUseContext p_getBlockToPlaceOnUse_1_)
+            {
+                IBlockState iblockstate = super.getBlockToPlaceOnUse(p_getBlockToPlaceOnUse_1_);
+                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.func_196000_l().getAxis());
+                return iblockstate;
+            }
+        };
+    };
+
     //Slabs
-    Block OAK_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block SPRUCE_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block BIRCH_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block JUNGLE_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block ACACIA_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block DARK_OAK_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
+    Block OAK_LOG_SLAB = LOG_SLABS.get();
+    Block SPRUCE_LOG_SLAB = LOG_SLABS.get();
+    Block BIRCH_LOG_SLAB = LOG_SLABS.get();
+    Block JUNGLE_LOG_SLAB = LOG_SLABS.get();
+    Block ACACIA_LOG_SLAB = LOG_SLABS.get();
+    Block DARK_OAK_LOG_SLAB = LOG_SLABS.get();
     //Stripped
-    Block STRIPPED_OAK_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block STRIPPED_SPRUCE_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block STRIPPED_BIRCH_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block STRIPPED_JUNGLE_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block STRIPPED_ACACIA_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
-    Block STRIPPED_DARK_OAK_LOG_SLAB = new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).soundType(SoundType.WOOD));
+    Block STRIPPED_OAK_LOG_SLAB = LOG_SLABS.get();
+    Block STRIPPED_SPRUCE_LOG_SLAB = LOG_SLABS.get();
+    Block STRIPPED_BIRCH_LOG_SLAB = LOG_SLABS.get();
+    Block STRIPPED_JUNGLE_LOG_SLAB = LOG_SLABS.get();
+    Block STRIPPED_ACACIA_LOG_SLAB = LOG_SLABS.get();
+    Block STRIPPED_DARK_OAK_LOG_SLAB = LOG_SLABS.get();
 
     //Stairs
     Block OAK_LOG_STAIRS = LOG_STAIRS.get();
