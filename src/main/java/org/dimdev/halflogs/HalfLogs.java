@@ -68,11 +68,11 @@ public class HalfLogs implements BlockAdder, ItemAdder {
                         return false;
                     }
 
-                    IBlockState newState = strippedBlock.getDefaultState()
+                    p_world.setBlockState(p_blockPos, strippedBlock.getDefaultState()
                             .withProperty(AXIS, p_blockState.getValue(AXIS))
                             .withProperty(BlockStairs.FACING, p_blockState.getValue(BlockStairs.FACING))
-                            .withProperty(BlockStairs.HALF, p_blockState.getValue(BlockStairs.HALF));
-                    p_world.setBlockState(p_blockPos, updatePostPlacement(newState, p_player.getAdjustedHorizontalFacing(), newState, p_world, p_blockPos, p_blockPos));
+                            .withProperty(BlockStairs.HALF, p_blockState.getValue(BlockStairs.HALF))
+                            .withProperty(BlockStairs.SHAPE, p_blockState.getValue(BlockStairs.SHAPE)));
                     p_world.playSound(p_player, p_blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     stack.damageItem(1, p_player);
                     return true;
