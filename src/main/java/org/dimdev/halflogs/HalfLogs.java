@@ -7,14 +7,19 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.item.*;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.SlabType;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import org.dimdev.rift.listener.BlockAdder;
 import org.dimdev.rift.listener.ItemAdder;
 
@@ -37,8 +42,42 @@ public class HalfLogs implements BlockAdder, ItemAdder {
             public IBlockState getStateForPlacement(BlockItemUseContext p_getBlockToPlaceOnUse_1_)
             {
                 IBlockState iblockstate = super.getStateForPlacement(p_getBlockToPlaceOnUse_1_);
-                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.func_196010_d().getAxis());
+                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.getFace().getAxis());
                 return iblockstate;
+            }
+
+            @Override
+            public boolean onBlockActivated(IBlockState p_blockState, World p_world, BlockPos p_blockPos, EntityPlayer p_player, EnumHand p_hand, EnumFacing p_facing, float hitX, float hitY, float hitZ) {
+                ItemStack stack = p_hand == EnumHand.MAIN_HAND ? p_player.getHeldItemMainhand() : p_player.getHeldItemOffhand();
+                Item item = stack.getItem();
+                if (item instanceof ItemAxe) {
+                    Block strippedBlock;
+                    if (this == OAK_LOG_STAIRS) {
+                        strippedBlock = STRIPPED_OAK_LOG_STAIRS;
+                    } else if (this == SPRUCE_LOG_STAIRS) {
+                        strippedBlock = STRIPPED_SPRUCE_LOG_STAIRS;
+                    } else if (this == BIRCH_LOG_STAIRS) {
+                        strippedBlock = STRIPPED_BIRCH_LOG_STAIRS;
+                    } else if (this == JUNGLE_LOG_STAIRS) {
+                        strippedBlock = STRIPPED_JUNGLE_LOG_STAIRS;
+                    } else if (this == ACACIA_LOG_STAIRS) {
+                        strippedBlock = STRIPPED_ACACIA_LOG_STAIRS;
+                    } else if (this == DARK_OAK_LOG_STAIRS) {
+                        strippedBlock = STRIPPED_DARK_OAK_LOG_STAIRS;
+                    } else {
+                        return false;
+                    }
+
+                    IBlockState newState = strippedBlock.getDefaultState()
+                            .withProperty(AXIS, p_blockState.getValue(AXIS))
+                            .withProperty(BlockStairs.FACING, p_blockState.getValue(BlockStairs.FACING))
+                            .withProperty(BlockStairs.HALF, p_blockState.getValue(BlockStairs.HALF));
+                    p_world.setBlockState(p_blockPos, updatePostPlacement(newState, p_player.getAdjustedHorizontalFacing(), newState, p_world, p_blockPos, p_blockPos));
+                    p_world.playSound(p_player, p_blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    stack.damageItem(1, p_player);
+                    return true;
+                }
+                return false;
             }
         };
     };
@@ -56,41 +95,74 @@ public class HalfLogs implements BlockAdder, ItemAdder {
             public IBlockState getStateForPlacement(BlockItemUseContext p_getBlockToPlaceOnUse_1_)
             {
                 IBlockState iblockstate = super.getStateForPlacement(p_getBlockToPlaceOnUse_1_);
-                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.func_196010_d().getAxis());
+                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.getFace().getAxis());
                 return iblockstate;
+            }
+
+            @Override
+            public boolean onBlockActivated(IBlockState p_blockState, World p_world, BlockPos p_blockPos, EntityPlayer p_player, EnumHand p_hand, EnumFacing p_facing, float hitX, float hitY, float hitZ) {
+                ItemStack stack = p_hand == EnumHand.MAIN_HAND ? p_player.getHeldItemMainhand() : p_player.getHeldItemOffhand();
+                Item item = stack.getItem();
+                if (item instanceof ItemAxe) {
+                    Block strippedBlock;
+                    if (this == OAK_LOG_SLAB) {
+                        strippedBlock = STRIPPED_OAK_LOG_SLAB;
+                    } else if (this == SPRUCE_LOG_SLAB) {
+                        strippedBlock = STRIPPED_SPRUCE_LOG_SLAB;
+                    } else if (this == BIRCH_LOG_SLAB) {
+                        strippedBlock = STRIPPED_BIRCH_LOG_SLAB;
+                    } else if (this == JUNGLE_LOG_SLAB) {
+                        strippedBlock = STRIPPED_JUNGLE_LOG_SLAB;
+                    } else if (this == ACACIA_LOG_SLAB) {
+                        strippedBlock = STRIPPED_ACACIA_LOG_SLAB;
+                    } else if (this == DARK_OAK_LOG_SLAB) {
+                        strippedBlock = STRIPPED_DARK_OAK_LOG_SLAB;
+                    } else {
+                        return false;
+                    }
+
+                    SlabType slabType = p_blockState.getValue(BlockSlab.TYPE);
+                    p_world.setBlockState(p_blockPos, strippedBlock.getDefaultState()
+                            .withProperty(AXIS, p_blockState.getValue(AXIS))
+                            .withProperty(BlockSlab.TYPE, slabType));
+                    p_world.playSound(p_player, p_blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    stack.damageItem(slabType == SlabType.DOUBLE ? (p_world.rand.nextBoolean() ? 2 : 1) : 1, p_player); //just because
+                    return true;
+                }
+                return false;
             }
         };
     };
 
     //Slabs
-    Block OAK_LOG_SLAB = LOG_SLABS.get();
-    Block SPRUCE_LOG_SLAB = LOG_SLABS.get();
-    Block BIRCH_LOG_SLAB = LOG_SLABS.get();
-    Block JUNGLE_LOG_SLAB = LOG_SLABS.get();
-    Block ACACIA_LOG_SLAB = LOG_SLABS.get();
-    Block DARK_OAK_LOG_SLAB = LOG_SLABS.get();
+    public final static Block OAK_LOG_SLAB = LOG_SLABS.get();
+    public final static Block SPRUCE_LOG_SLAB = LOG_SLABS.get();
+    public final static Block BIRCH_LOG_SLAB = LOG_SLABS.get();
+    public final static Block JUNGLE_LOG_SLAB = LOG_SLABS.get();
+    public final static Block ACACIA_LOG_SLAB = LOG_SLABS.get();
+    public final static Block DARK_OAK_LOG_SLAB = LOG_SLABS.get();
     //Stripped
-    Block STRIPPED_OAK_LOG_SLAB = LOG_SLABS.get();
-    Block STRIPPED_SPRUCE_LOG_SLAB = LOG_SLABS.get();
-    Block STRIPPED_BIRCH_LOG_SLAB = LOG_SLABS.get();
-    Block STRIPPED_JUNGLE_LOG_SLAB = LOG_SLABS.get();
-    Block STRIPPED_ACACIA_LOG_SLAB = LOG_SLABS.get();
-    Block STRIPPED_DARK_OAK_LOG_SLAB = LOG_SLABS.get();
+    public final static Block STRIPPED_OAK_LOG_SLAB = LOG_SLABS.get();
+    public final static Block STRIPPED_SPRUCE_LOG_SLAB = LOG_SLABS.get();
+    public final static Block STRIPPED_BIRCH_LOG_SLAB = LOG_SLABS.get();
+    public final static Block STRIPPED_JUNGLE_LOG_SLAB = LOG_SLABS.get();
+    public final static Block STRIPPED_ACACIA_LOG_SLAB = LOG_SLABS.get();
+    public final static Block STRIPPED_DARK_OAK_LOG_SLAB = LOG_SLABS.get();
 
     //Stairs
-    Block OAK_LOG_STAIRS = LOG_STAIRS.get();
-    Block SPRUCE_LOG_STAIRS = LOG_STAIRS.get();
-    Block BIRCH_LOG_STAIRS = LOG_STAIRS.get();
-    Block JUNGLE_LOG_STAIRS = LOG_STAIRS.get();
-    Block ACACIA_LOG_STAIRS = LOG_STAIRS.get();
-    Block DARK_OAK_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block OAK_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block SPRUCE_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block BIRCH_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block JUNGLE_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block ACACIA_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block DARK_OAK_LOG_STAIRS = LOG_STAIRS.get();
     //Stripped
-    Block STRIPPED_OAK_LOG_STAIRS = LOG_STAIRS.get();
-    Block STRIPPED_SPRUCE_LOG_STAIRS = LOG_STAIRS.get();
-    Block STRIPPED_BIRCH_LOG_STAIRS = LOG_STAIRS.get();
-    Block STRIPPED_JUNGLE_LOG_STAIRS = LOG_STAIRS.get();
-    Block STRIPPED_ACACIA_LOG_STAIRS = LOG_STAIRS.get();
-    Block STRIPPED_DARK_OAK_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block STRIPPED_OAK_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block STRIPPED_SPRUCE_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block STRIPPED_BIRCH_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block STRIPPED_JUNGLE_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block STRIPPED_ACACIA_LOG_STAIRS = LOG_STAIRS.get();
+    public final static Block STRIPPED_DARK_OAK_LOG_STAIRS = LOG_STAIRS.get();
 
     @Override
     public void registerBlocks() {
