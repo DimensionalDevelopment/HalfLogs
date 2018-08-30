@@ -1,124 +1,337 @@
 {
-    "variants": {
-        "facing=east,half=bottom,shape=straight,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs" },
-        "facing=west,half=bottom,shape=straight,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs", "y": 180, "uvlock": true },
-        "facing=south,half=bottom,shape=straight,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs", "y": 90, "uvlock": true },
-        "facing=north,half=bottom,shape=straight,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs", "y": 270, "uvlock": true },
-        "facing=east,half=bottom,shape=outer_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer" },
-        "facing=west,half=bottom,shape=outer_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "y": 180, "uvlock": true },
-        "facing=south,half=bottom,shape=outer_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "y": 90, "uvlock": true },
-        "facing=north,half=bottom,shape=outer_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "y": 270, "uvlock": true },
-        "facing=east,half=bottom,shape=outer_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "y": 270, "uvlock": true },
-        "facing=west,half=bottom,shape=outer_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "y": 90, "uvlock": true },
-        "facing=south,half=bottom,shape=outer_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer" },
-        "facing=north,half=bottom,shape=outer_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "y": 180, "uvlock": true },
-        "facing=east,half=bottom,shape=inner_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner" },
-        "facing=west,half=bottom,shape=inner_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "y": 180, "uvlock": true },
-        "facing=south,half=bottom,shape=inner_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "y": 90, "uvlock": true },
-        "facing=north,half=bottom,shape=inner_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "y": 270, "uvlock": true },
-        "facing=east,half=bottom,shape=inner_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "y": 270, "uvlock": true },
-        "facing=west,half=bottom,shape=inner_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "y": 90, "uvlock": true },
-        "facing=south,half=bottom,shape=inner_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner" },
-        "facing=north,half=bottom,shape=inner_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "y": 180, "uvlock": true },
-        "facing=east,half=top,shape=straight,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs", "x": 180, "uvlock": true },
-        "facing=west,half=top,shape=straight,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs", "x": 180, "y": 180, "uvlock": true },
-        "facing=south,half=top,shape=straight,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs", "x": 180, "y": 90, "uvlock": true },
-        "facing=north,half=top,shape=straight,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs", "x": 180, "y": 270, "uvlock": true },
-        "facing=east,half=top,shape=outer_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 90, "uvlock": true },
-        "facing=west,half=top,shape=outer_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 270, "uvlock": true },
-        "facing=south,half=top,shape=outer_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 180, "uvlock": true },
-        "facing=north,half=top,shape=outer_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "uvlock": true },
-        "facing=east,half=top,shape=outer_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "uvlock": true },
-        "facing=west,half=top,shape=outer_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 180, "uvlock": true },
-        "facing=south,half=top,shape=outer_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 90, "uvlock": true },
-        "facing=north,half=top,shape=outer_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 270, "uvlock": true },
-        "facing=east,half=top,shape=inner_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 90, "uvlock": true },
-        "facing=west,half=top,shape=inner_right,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 270, "uvlock": true },
-        "facing=south,half=top,shape=inner_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 180, "uvlock": true },
-        "facing=north,half=top,shape=inner_right,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "uvlock": true },
-        "facing=east,half=top,shape=inner_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "uvlock": true },
-        "facing=west,half=top,shape=inner_left,axis=y":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 180, "uvlock": true },
-        "facing=south,half=top,shape=inner_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 90, "uvlock": true },
-        "facing=north,half=top,shape=inner_left,axis=y":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 270, "uvlock": true },
-        "facing=east,half=bottom,shape=straight,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_x" },
-        "facing=west,half=bottom,shape=straight,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_x", "y": 180 },
-        "facing=south,half=bottom,shape=straight,axis=x": { "model": "halflogs:block/stripped_acacia_log_stairs_z", "y": 90 },
-        "facing=north,half=bottom,shape=straight,axis=x": { "model": "halflogs:block/stripped_acacia_log_stairs_z", "y": 270 },
-        "facing=east,half=bottom,shape=outer_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_x" },
-        "facing=west,half=bottom,shape=outer_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_x", "y": 180 },
-        "facing=south,half=bottom,shape=outer_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z", "y": 90 },
-        "facing=north,half=bottom,shape=outer_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z", "y": 270 },
-        "facing=east,half=bottom,shape=outer_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z", "y": 270 },
-        "facing=west,half=bottom,shape=outer_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z", "y": 90 },
-        "facing=south,half=bottom,shape=outer_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x" },
-        "facing=north,half=bottom,shape=outer_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "y": 180 },
-        "facing=east,half=bottom,shape=inner_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x" },
-        "facing=west,half=bottom,shape=inner_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x", "y": 180 },
-        "facing=south,half=bottom,shape=inner_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z", "y": 90 },
-        "facing=north,half=bottom,shape=inner_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z", "y": 270 },
-        "facing=east,half=bottom,shape=inner_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z", "y": 270 },
-        "facing=west,half=bottom,shape=inner_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z", "y": 90 },
-        "facing=south,half=bottom,shape=inner_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x" },
-        "facing=north,half=bottom,shape=inner_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x", "y": 180 },
-        "facing=east,half=top,shape=straight,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_x", "x": 180 },
-        "facing=west,half=top,shape=straight,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_x", "x": 180, "y": 180 },
-        "facing=south,half=top,shape=straight,axis=x": { "model": "halflogs:block/stripped_acacia_log_stairs_z", "x": 180, "y": 90 },
-        "facing=north,half=top,shape=straight,axis=x": { "model": "halflogs:block/stripped_acacia_log_stairs_z", "x": 180, "y": 270 },
-        "facing=east,half=top,shape=outer_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180, "y": 90 },
-        "facing=west,half=top,shape=outer_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180, "y": 270 },
-        "facing=south,half=top,shape=outer_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180, "y": 180 },
-        "facing=north,half=top,shape=outer_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180 },
-        "facing=east,half=top,shape=outer_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180 },
-        "facing=west,half=top,shape=outer_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180, "y": 180 },
-        "facing=south,half=top,shape=outer_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180, "y": 90 },
-        "facing=north,half=top,shape=outer_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180, "y": 270 },
-        "facing=east,half=top,shape=inner_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180, "y": 90 },
-        "facing=west,half=top,shape=inner_right,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180, "y": 270 },
-        "facing=south,half=top,shape=inner_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180, "y": 180 },
-        "facing=north,half=top,shape=inner_right,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180 },
-        "facing=east,half=top,shape=inner_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180 },
-        "facing=west,half=top,shape=inner_left,axis=x":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180, "y": 180 },
-        "facing=south,half=top,shape=inner_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180, "y": 90 },
-        "facing=north,half=top,shape=inner_left,axis=x":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180, "y": 270 },
-        "facing=east,half=bottom,shape=straight,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_z" },
-        "facing=west,half=bottom,shape=straight,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_z", "y": 180 },
-        "facing=south,half=bottom,shape=straight,axis=z": { "model": "halflogs:block/stripped_acacia_log_stairs_x", "y": 90 },
-        "facing=north,half=bottom,shape=straight,axis=z": { "model": "halflogs:block/stripped_acacia_log_stairs_x", "y": 270 },
-        "facing=east,half=bottom,shape=outer_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z" },
-        "facing=west,half=bottom,shape=outer_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z", "y": 180 },
-        "facing=south,half=bottom,shape=outer_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "y": 90 },
-        "facing=north,half=bottom,shape=outer_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "y": 270 },
-        "facing=east,half=bottom,shape=outer_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "y": 270 },
-        "facing=west,half=bottom,shape=outer_left,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_x", "y": 90 },
-        "facing=south,half=bottom,shape=outer_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z" },
-        "facing=north,half=bottom,shape=outer_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z", "y": 180 },
-        "facing=east,half=bottom,shape=inner_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z" },
-        "facing=west,half=bottom,shape=inner_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z", "y": 180 },
-        "facing=south,half=bottom,shape=inner_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x", "y": 90 },
-        "facing=north,half=bottom,shape=inner_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x", "y": 270 },
-        "facing=east,half=bottom,shape=inner_left,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x", "y": 270 },
-        "facing=west,half=bottom,shape=inner_left,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x", "y": 90 },
-        "facing=south,half=bottom,shape=inner_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z" },
-        "facing=north,half=bottom,shape=inner_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z", "y": 180 },
-        "facing=east,half=top,shape=straight,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_z", "x": 180 },
-        "facing=west,half=top,shape=straight,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_z", "x": 180, "y": 180 },
-        "facing=south,half=top,shape=straight,axis=z": { "model": "halflogs:block/stripped_acacia_log_stairs_x", "x": 180, "y": 90 },
-        "facing=north,half=top,shape=straight,axis=z": { "model": "halflogs:block/stripped_acacia_log_stairs_x", "x": 180, "y": 270 },
-        "facing=east,half=top,shape=outer_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180, "y": 90 },
-        "facing=west,half=top,shape=outer_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180, "y": 270 },
-        "facing=south,half=top,shape=outer_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180, "y": 180 },
-        "facing=north,half=top,shape=outer_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180 },
-        "facing=east,half=top,shape=outer_left,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180 },
-        "facing=west,half=top,shape=outer_left,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_outer_z", "x": 180, "y": 180 },
-        "facing=south,half=top,shape=outer_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180, "y": 90 },
-        "facing=north,half=top,shape=outer_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_outer_x", "x": 180, "y": 270 },
-        "facing=east,half=top,shape=inner_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180, "y": 90 },
-        "facing=west,half=top,shape=inner_right,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180, "y": 270 },
-        "facing=south,half=top,shape=inner_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180, "y": 180 },
-        "facing=north,half=top,shape=inner_right,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180 },
-        "facing=east,half=top,shape=inner_left,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180 },
-        "facing=west,half=top,shape=inner_left,axis=z":  { "model": "halflogs:block/stripped_acacia_log_stairs_inner_z", "x": 180, "y": 180 },
-        "facing=south,half=top,shape=inner_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180, "y": 90 },
-        "facing=north,half=top,shape=inner_left,axis=z":  { "model":  "halflogs:block/stripped_acacia_log_stairs_inner_x", "x": 180, "y": 270 }
-    }
+    "multipart": [
+        { "when": {"facing": "east", "half": "bottom", "shape": "straight", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs" }},
+        { "when": {"facing": "west", "half": "bottom", "shape": "straight", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs", "y": 180, "uvlock": true }},
+        { "when": {"facing": "south", "half": "bottom", "shape": "straight", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs", "y": 90, "uvlock": true }},
+        { "when": {"facing": "north", "half": "bottom", "shape": "straight", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs", "y": 270, "uvlock": true }},
+        { "when": {"facing": "east", "half": "bottom", "shape": "outer_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer" }},
+        { "when": {"facing": "west", "half": "bottom", "shape": "outer_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "y": 180, "uvlock": true }},
+        { "when": {"facing": "south", "half": "bottom", "shape": "outer_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "y": 90, "uvlock": true }},
+        { "when": {"facing": "north", "half": "bottom", "shape": "outer_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "y": 270, "uvlock": true }},
+        { "when": {"facing": "east", "half": "bottom", "shape": "outer_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "y": 270, "uvlock": true }},
+        { "when": {"facing": "west", "half": "bottom", "shape": "outer_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "y": 90, "uvlock": true }},
+        { "when": {"facing": "south", "half": "bottom", "shape": "outer_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer" }},
+        { "when": {"facing": "north", "half": "bottom", "shape": "outer_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "y": 180, "uvlock": true }},
+        { "when": {"facing": "east", "half": "bottom", "shape": "inner_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner" }},
+        { "when": {"facing": "west", "half": "bottom", "shape": "inner_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "y": 180, "uvlock": true }},
+        { "when": {"facing": "south", "half": "bottom", "shape": "inner_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "y": 90, "uvlock": true }},
+        { "when": {"facing": "north", "half": "bottom", "shape": "inner_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "y": 270, "uvlock": true }},
+        { "when": {"facing": "east", "half": "bottom", "shape": "inner_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "y": 270, "uvlock": true }},
+        { "when": {"facing": "west", "half": "bottom", "shape": "inner_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "y": 90, "uvlock": true }},
+        { "when": {"facing": "south", "half": "bottom", "shape": "inner_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner" }},
+        { "when": {"facing": "north", "half": "bottom", "shape": "inner_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "y": 180, "uvlock": true }},
+        { "when": {"facing": "east", "half": "top", "shape": "straight", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs", "x": 180, "uvlock": true }},
+        { "when": {"facing": "west", "half": "top", "shape": "straight", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs", "x": 180, "y": 180, "uvlock": true }},
+        { "when": {"facing": "south", "half": "top", "shape": "straight", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs", "x": 180, "y": 90, "uvlock": true }},
+        { "when": {"facing": "north", "half": "top", "shape": "straight", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs", "x": 180, "y": 270, "uvlock": true }},
+        { "when": {"facing": "east", "half": "top", "shape": "outer_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 90, "uvlock": true }},
+        { "when": {"facing": "west", "half": "top", "shape": "outer_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 270, "uvlock": true }},
+        { "when": {"facing": "south", "half": "top", "shape": "outer_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 180, "uvlock": true }},
+        { "when": {"facing": "north", "half": "top", "shape": "outer_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "uvlock": true }},
+        { "when": {"facing": "east", "half": "top", "shape": "outer_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "uvlock": true }},
+        { "when": {"facing": "west", "half": "top", "shape": "outer_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 180, "uvlock": true }},
+        { "when": {"facing": "south", "half": "top", "shape": "outer_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 90, "uvlock": true }},
+        { "when": {"facing": "north", "half": "top", "shape": "outer_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_outer", "x": 180, "y": 270, "uvlock": true }},
+        { "when": {"facing": "east", "half": "top", "shape": "inner_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 90, "uvlock": true }},
+        { "when": {"facing": "west", "half": "top", "shape": "inner_right", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 270, "uvlock": true }},
+        { "when": {"facing": "south", "half": "top", "shape": "inner_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 180, "uvlock": true }},
+        { "when": {"facing": "north", "half": "top", "shape": "inner_right", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "uvlock": true }},
+        { "when": {"facing": "east", "half": "top", "shape": "inner_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "uvlock": true }},
+        { "when": {"facing": "west", "half": "top", "shape": "inner_left", "axis": "y"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 180, "uvlock": true }},
+        { "when": {"facing": "south", "half": "top", "shape": "inner_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 90, "uvlock": true }},
+        { "when": {"facing": "north", "half": "top", "shape": "inner_left", "axis": "y"}, "apply": { "model":  "halflogs:block/stripped_acacia_log_stairs_inner", "x": 180, "y": 270, "uvlock": true }},
+		
+		{ "when": {"half": "bottom", "axis": "x"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom" }},
+		{ "when": {"half": "bottom", "axis": "z"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom", "y": 270 }},
+		{ "when": {"half": "top", "axis": "x"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top" }},
+		{ "when": {"half": "top", "axis": "z"}, "apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top", "y": 270 }},
+				
+        { 
+			"when": {
+				"OR": [
+				{"facing": "west", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "outer_right", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "outer_left", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_nw"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "east", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "outer_right", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "outer_left", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_se"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "north", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "outer_right", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "outer_left", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_ne"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "south", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "south", "half": "bottom", "shape": "outer_right", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "straight", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "inner_right", "axis": "x"},
+				{"facing": "west", "half": "bottom", "shape": "outer_left", "axis": "x"},
+				{"facing": "north", "half": "bottom", "shape": "inner_left", "axis": "x"},
+				{"facing": "east", "half": "bottom", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_sw"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "west", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "outer_right", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "outer_left", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_nw"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "east", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "outer_right", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "outer_left", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_se"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "north", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "outer_right", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "outer_left", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_ne"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "south", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "south", "half": "top", "shape": "outer_right", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "straight", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "inner_right", "axis": "x"},
+				{"facing": "west", "half": "top", "shape": "outer_left", "axis": "x"},
+				{"facing": "north", "half": "top", "shape": "inner_left", "axis": "x"},
+				{"facing": "east", "half": "top", "shape": "inner_right", "axis": "x"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_sw"}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "west", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "outer_right", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "outer_left", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_ne", "y": 270}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "east", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "outer_right", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "outer_left", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_sw", "y": 270}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "north", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "outer_right", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "outer_left", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_se", "y": 270}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "south", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "south", "half": "bottom", "shape": "outer_right", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "straight", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "inner_right", "axis": "z"},
+				{"facing": "west", "half": "bottom", "shape": "outer_left", "axis": "z"},
+				{"facing": "north", "half": "bottom", "shape": "inner_left", "axis": "z"},
+				{"facing": "east", "half": "bottom", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_bottom_nw", "y": 270}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "west", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "outer_right", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "outer_left", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_ne", "y": 270}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "east", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "outer_right", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "outer_left", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_sw", "y": 270}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "north", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "outer_right", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "outer_left", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_se", "y": 270}
+		},
+		
+		{ 
+			"when": {
+				"OR": [
+				{"facing": "south", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "south", "half": "top", "shape": "outer_right", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "straight", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "inner_right", "axis": "z"},
+				{"facing": "west", "half": "top", "shape": "outer_left", "axis": "z"},
+				{"facing": "north", "half": "top", "shape": "inner_left", "axis": "z"},
+				{"facing": "east", "half": "top", "shape": "inner_right", "axis": "z"}
+				]
+			},
+			"apply": { "model": "halflogs:block/stripped_acacia_log_stairs_top_nw", "y": 270}
+		}
+    ]
 }

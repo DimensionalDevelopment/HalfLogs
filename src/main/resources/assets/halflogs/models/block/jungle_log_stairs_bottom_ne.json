@@ -1,0 +1,8 @@
+{
+    "parent": "halflogs:block/log_stairs_bottom_ne",
+    "textures": {
+        "top": "block/jungle_log_top",
+        "side": "block/jungle_log",
+		"core": "halflogs:block/jungle_log_core"
+    }
+}

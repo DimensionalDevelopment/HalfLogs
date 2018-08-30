@@ -1,0 +1,8 @@
+{
+    "parent": "halflogs:block/log_stairs_bottom",
+    "textures": {
+        "top": "block/stripped_birch_log_top",
+        "side": "block/stripped_birch_log",
+		"core": "halflogs:block/stripped_birch_log_core"
+    }
+}
