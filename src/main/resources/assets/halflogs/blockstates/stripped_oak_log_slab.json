@@ -7,7 +7,7 @@
         "type=top,axis=x": { "model": "halflogs:block/stripped_oak_log_stairs_top" },
         "type=double,axis=x": { "model": "block/stripped_oak_log", "x": 90, "y": 90 },
         "type=bottom,axis=z": { "model": "halflogs:block/stripped_oak_log_stairs_bottom", "y": 270 },
-        "type=top,axis=z": { "model": "halflogs:block/stripped_oak_log_stairs_bottom", "y": 270 },
+        "type=top,axis=z": { "model": "halflogs:block/stripped_oak_log_stairs_top", "y": 270 },
         "type=double,axis=z": { "model": "block/stripped_oak_log", "x": 90 }
     }
 }
