@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle.tweaker-client'
 apply plugin: 'java'
 
 group 'org.dimdev.halflogs'
-version '1.0.1'
+version '1.2.0'
 archivesBaseName = 'HalfLogs'
 
 sourceCompatibility = 1.8
