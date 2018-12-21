@@ -1,16 +1,25 @@
 package org.dimdev.halflogs;
 
+import java.util.function.Supplier;
+
+import org.dimdev.rift.listener.BlockAdder;
+import org.dimdev.rift.listener.ItemAdder;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.SlabType;
@@ -20,10 +29,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.dimdev.rift.listener.BlockAdder;
-import org.dimdev.rift.listener.ItemAdder;
-
-import java.util.function.Supplier;
 
 public class HalfLogs implements BlockAdder, ItemAdder {
     public static final EnumProperty<EnumFacing.Axis> AXIS = EnumProperty.<EnumFacing.Axis>create("axis", EnumFacing.Axis.class);
@@ -31,7 +36,7 @@ public class HalfLogs implements BlockAdder, ItemAdder {
     private static Supplier<BlockStairs> LOG_STAIRS = () -> {
         Block block = Blocks.OAK_LOG;
 
-        return new BlockStairs(block.getDefaultState(), Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)) {
+        return new BlockStairs(block.getDefaultState(), Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)) {
             @Override
             protected void fillStateContainer(StateContainer.Builder<Block,IBlockState> p_Builder) {
                 super.fillStateContainer(p_Builder);
@@ -42,7 +47,7 @@ public class HalfLogs implements BlockAdder, ItemAdder {
             public IBlockState getStateForPlacement(BlockItemUseContext p_getBlockToPlaceOnUse_1_)
             {
                 IBlockState iblockstate = super.getStateForPlacement(p_getBlockToPlaceOnUse_1_);
-                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.getFace().getAxis());
+                iblockstate = iblockstate.with(AXIS, p_getBlockToPlaceOnUse_1_.getFace().getAxis());
                 return iblockstate;
             }
 
@@ -69,10 +74,10 @@ public class HalfLogs implements BlockAdder, ItemAdder {
                     }
 
                     p_world.setBlockState(p_blockPos, strippedBlock.getDefaultState()
-                            .withProperty(AXIS, p_blockState.getValue(AXIS))
-                            .withProperty(BlockStairs.FACING, p_blockState.getValue(BlockStairs.FACING))
-                            .withProperty(BlockStairs.HALF, p_blockState.getValue(BlockStairs.HALF))
-                            .withProperty(BlockStairs.SHAPE, p_blockState.getValue(BlockStairs.SHAPE)));
+                            .with(AXIS, p_blockState.get(AXIS))
+                            .with(BlockStairs.FACING, p_blockState.get(BlockStairs.FACING))
+                            .with(BlockStairs.HALF, p_blockState.get(BlockStairs.HALF))
+                            .with(BlockStairs.SHAPE, p_blockState.get(BlockStairs.SHAPE)));
                     p_world.playSound(p_player, p_blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     stack.damageItem(1, p_player);
                     return true;
@@ -84,7 +89,7 @@ public class HalfLogs implements BlockAdder, ItemAdder {
 
     private static Supplier<BlockSlab> LOG_SLABS = () -> {
 
-        return new BlockSlab(Block.Builder.create(Material.WOOD, MapColor.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)) {
+        return new BlockSlab(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)) {
             @Override
             protected void fillStateContainer(StateContainer.Builder<Block,IBlockState> p_Builder) {
                 super.fillStateContainer(p_Builder);
@@ -95,7 +100,7 @@ public class HalfLogs implements BlockAdder, ItemAdder {
             public IBlockState getStateForPlacement(BlockItemUseContext p_getBlockToPlaceOnUse_1_)
             {
                 IBlockState iblockstate = super.getStateForPlacement(p_getBlockToPlaceOnUse_1_);
-                iblockstate = iblockstate.withProperty(AXIS, p_getBlockToPlaceOnUse_1_.getFace().getAxis());
+                iblockstate = iblockstate.with(AXIS, p_getBlockToPlaceOnUse_1_.getFace().getAxis());
                 return iblockstate;
             }
 
@@ -121,10 +126,10 @@ public class HalfLogs implements BlockAdder, ItemAdder {
                         return false;
                     }
 
-                    SlabType slabType = p_blockState.getValue(BlockSlab.TYPE);
+                    SlabType slabType = p_blockState.get(BlockSlab.TYPE);
                     p_world.setBlockState(p_blockPos, strippedBlock.getDefaultState()
-                            .withProperty(AXIS, p_blockState.getValue(AXIS))
-                            .withProperty(BlockSlab.TYPE, slabType));
+                            .with(AXIS, p_blockState.get(AXIS))
+                            .with(BlockSlab.TYPE, slabType));
                     p_world.playSound(p_player, p_blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     stack.damageItem(slabType == SlabType.DOUBLE ? (p_world.rand.nextBoolean() ? 2 : 1) : 1, p_player); //just because
                     return true;
