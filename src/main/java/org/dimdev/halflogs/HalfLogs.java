@@ -6,9 +6,6 @@ import org.dimdev.rift.listener.ItemAdder;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.BlockStairs;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -135,14 +132,14 @@ public class HalfLogs implements BlockAdder, ItemAdder {
 		};
 	}
 
-	// Slabs
+
 	public final static Block OAK_LOG_SLAB = createLogSlab(Blocks.OAK_LOG);
 	public final static Block SPRUCE_LOG_SLAB = createLogSlab(Blocks.SPRUCE_LOG);
 	public final static Block BIRCH_LOG_SLAB = createLogSlab(Blocks.BIRCH_LOG);
 	public final static Block JUNGLE_LOG_SLAB = createLogSlab(Blocks.JUNGLE_LOG);
 	public final static Block ACACIA_LOG_SLAB = createLogSlab(Blocks.ACACIA_LOG);
 	public final static Block DARK_OAK_LOG_SLAB = createLogSlab(Blocks.DARK_OAK_LOG);
-	// Stripped
+
 	public final static Block STRIPPED_OAK_LOG_SLAB = createLogSlab(Blocks.STRIPPED_OAK_LOG);
 	public final static Block STRIPPED_SPRUCE_LOG_SLAB = createLogSlab(Blocks.STRIPPED_SPRUCE_LOG);
 	public final static Block STRIPPED_BIRCH_LOG_SLAB = createLogSlab(Blocks.STRIPPED_BIRCH_LOG);
@@ -150,14 +147,13 @@ public class HalfLogs implements BlockAdder, ItemAdder {
 	public final static Block STRIPPED_ACACIA_LOG_SLAB = createLogSlab(Blocks.STRIPPED_ACACIA_LOG);
 	public final static Block STRIPPED_DARK_OAK_LOG_SLAB = createLogSlab(Blocks.STRIPPED_DARK_OAK_LOG);
 
-	// Stairs
 	public final static Block OAK_LOG_STAIRS = createLogStairs(Blocks.OAK_LOG);
 	public final static Block SPRUCE_LOG_STAIRS = createLogStairs(Blocks.SPRUCE_LOG);
 	public final static Block BIRCH_LOG_STAIRS = createLogStairs(Blocks.BIRCH_LOG);
 	public final static Block JUNGLE_LOG_STAIRS = createLogStairs(Blocks.JUNGLE_LOG);
 	public final static Block ACACIA_LOG_STAIRS = createLogStairs(Blocks.ACACIA_LOG);
 	public final static Block DARK_OAK_LOG_STAIRS = createLogStairs(Blocks.DARK_OAK_LOG);
-	// Stripped
+
 	public final static Block STRIPPED_OAK_LOG_STAIRS = createLogStairs(Blocks.STRIPPED_OAK_LOG);
 	public final static Block STRIPPED_SPRUCE_LOG_STAIRS = createLogStairs(Blocks.STRIPPED_SPRUCE_LOG);
 	public final static Block STRIPPED_BIRCH_LOG_STAIRS = createLogStairs(Blocks.STRIPPED_BIRCH_LOG);
@@ -167,14 +163,13 @@ public class HalfLogs implements BlockAdder, ItemAdder {
 
 	@Override
 	public void registerBlocks() {
-		// Slabs
 		Block.register(new ResourceLocation("halflogs:oak_log_slab"), OAK_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:spruce_log_slab"), SPRUCE_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:birch_log_slab"), BIRCH_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:jungle_log_slab"), JUNGLE_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:acacia_log_slab"), ACACIA_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:dark_oak_log_slab"), DARK_OAK_LOG_SLAB);
-		// Stripped
+		
 		Block.register(new ResourceLocation("halflogs:stripped_oak_log_slab"), STRIPPED_OAK_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:stripped_spruce_log_slab"), STRIPPED_SPRUCE_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:stripped_birch_log_slab"), STRIPPED_BIRCH_LOG_SLAB);
@@ -182,14 +177,13 @@ public class HalfLogs implements BlockAdder, ItemAdder {
 		Block.register(new ResourceLocation("halflogs:stripped_acacia_log_slab"), STRIPPED_ACACIA_LOG_SLAB);
 		Block.register(new ResourceLocation("halflogs:stripped_dark_oak_log_slab"), STRIPPED_DARK_OAK_LOG_SLAB);
 
-		// Stairs
 		Block.register(new ResourceLocation("halflogs:oak_log_stairs"), OAK_LOG_STAIRS);
 		Block.register(new ResourceLocation("halflogs:spruce_log_stairs"), SPRUCE_LOG_STAIRS);
 		Block.register(new ResourceLocation("halflogs:birch_log_stairs"), BIRCH_LOG_STAIRS);
 		Block.register(new ResourceLocation("halflogs:jungle_log_stairs"), JUNGLE_LOG_STAIRS);
 		Block.register(new ResourceLocation("halflogs:acacia_log_stairs"), ACACIA_LOG_STAIRS);
 		Block.register(new ResourceLocation("halflogs:dark_oak_log_stairs"), DARK_OAK_LOG_STAIRS);
-		// Stripped
+
 		Block.register(new ResourceLocation("halflogs:stripped_oak_log_stairs"), STRIPPED_OAK_LOG_STAIRS);
 		Block.register(new ResourceLocation("halflogs:stripped_spruce_log_stairs"), STRIPPED_SPRUCE_LOG_STAIRS);
 		Block.register(new ResourceLocation("halflogs:stripped_birch_log_stairs"), STRIPPED_BIRCH_LOG_STAIRS);
@@ -200,14 +194,13 @@ public class HalfLogs implements BlockAdder, ItemAdder {
 
 	@Override
 	public void registerItems() {
-		// Slabs
 		Item.register(OAK_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(SPRUCE_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(BIRCH_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(JUNGLE_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(ACACIA_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(DARK_OAK_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
-		// Stripped
+
 		Item.register(STRIPPED_OAK_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(STRIPPED_SPRUCE_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(STRIPPED_BIRCH_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
@@ -215,14 +208,13 @@ public class HalfLogs implements BlockAdder, ItemAdder {
 		Item.register(STRIPPED_ACACIA_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 		Item.register(STRIPPED_DARK_OAK_LOG_SLAB, ItemGroup.BUILDING_BLOCKS);
 
-		// Stairs
 		Item.register(OAK_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
 		Item.register(SPRUCE_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
 		Item.register(BIRCH_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
 		Item.register(JUNGLE_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
 		Item.register(ACACIA_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
 		Item.register(DARK_OAK_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
-		// Stripped
+
 		Item.register(STRIPPED_OAK_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
 		Item.register(STRIPPED_SPRUCE_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
 		Item.register(STRIPPED_BIRCH_LOG_STAIRS, ItemGroup.BUILDING_BLOCKS);
