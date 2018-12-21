@@ -1,13 +1,13 @@
 buildscript {
-	repositories {
+    repositories {
         mavenCentral()
-		maven { url 'https://www.jitpack.io' }
-		maven { url 'https://files.minecraftforge.net/maven' }
+        maven { url 'https://www.jitpack.io' }
+        maven { url 'https://files.minecraftforge.net/maven' }
         maven { url 'https://www.dimdev.org/maven/' }
-	}
-	dependencies {
-		classpath 'com.github.Chocohead:ForgeGradle:moderniser-SNAPSHOT'
-	}
+    }
+    dependencies {
+        classpath 'com.github.Chocohead:ForgeGradle:moderniser-SNAPSHOT'
+    }
 }
 
 apply plugin: 'net.minecraftforge.gradle.tweaker-client'
@@ -22,18 +22,18 @@ targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
-	maven { url 'https://www.jitpack.io' }
-	maven { url 'http://repo.strezz.org/artifactory/list/Strezz-Central' }
+    maven { url 'https://www.jitpack.io' }
+    maven { url 'http://repo.strezz.org/artifactory/list/Strezz-Central' }
     maven { url 'https://www.dimdev.org/maven/' }
 }
 
 dependencies {
-	implementation 'com.github.Chocohead:Rift:jitpack-SNAPSHOT:dev'
+    implementation 'com.github.Chocohead:Rift:jitpack-SNAPSHOT:dev'
 }
 
 minecraft {
-	version = '1.13.2'
-	mappings = 'snapshot_20181130'
-	runDir = 'run'
-	tweakClass = 'org.dimdev.riftloader.launch.RiftLoaderClientTweaker'
+    version = '1.13.2'
+    mappings = 'snapshot_20181130'
+    runDir = 'run'
+    tweakClass = 'org.dimdev.riftloader.launch.RiftLoaderClientTweaker'
 }
