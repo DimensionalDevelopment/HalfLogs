@@ -1,0 +1,29 @@
+{
+  "block.halflogs.oak_log_slab": "Цельная дубовая плита",
+  "block.halflogs.spruce_log_slab": "Цельная еловая плита",
+  "block.halflogs.birch_log_slab": "Цельная берёзовая плита",
+  "block.halflogs.jungle_log_slab": "Цельная джунглевая плита",
+  "block.halflogs.acacia_log_slab": "Цельная акациевая плита",
+  "block.halflogs.dark_oak_log_slab": "Цельная плита из тёмного дуба",
+  
+  "block.halflogs.stripped_oak_log_slab": "Обтёсанная дубовая плита",
+  "block.halflogs.stripped_spruce_log_slab": "Обтёсанная еловая плита",
+  "block.halflogs.stripped_birch_log_slab": "Обтёсанная берёзовая плита",
+  "block.halflogs.stripped_jungle_log_slab": "Обтёсанная джунглевая плита",
+  "block.halflogs.stripped_acacia_log_slab": "Обтёсанная акациевая плита",
+  "block.halflogs.stripped_dark_oak_log_slab": "Обтёсанная плита из тёмного дуба",
+  
+  "block.halflogs.oak_log_stairs": "Цельные дубовые ступеньки",
+  "block.halflogs.spruce_log_stairs": "Цельные еловые ступеньки",
+  "block.halflogs.birch_log_stairs": "Цельные берёзовые ступеньки",
+  "block.halflogs.jungle_log_stairs": "Цельные джунглевые ступеньки",
+  "block.halflogs.acacia_log_stairs": "Цельные акациевые ступеньки",
+  "block.halflogs.dark_oak_log_stairs": "Цельные ступеньки из тёмного дуба",
+  
+  "block.halflogs.stripped_oak_log_stairs": "Обтёсанные дубовые ступеньки",
+  "block.halflogs.stripped_spruce_log_stairs": "Обтёсанные еловые ступеньки",
+  "block.halflogs.stripped_birch_log_stairs": "Обтёсанные берёзовые ступеньки",
+  "block.halflogs.stripped_jungle_log_stairs": "Обтёсанные джунглевые ступеньки",
+  "block.halflogs.stripped_acacia_log_stairs": "Обтёсанные акациевые ступеньки",
+  "block.halflogs.stripped_dark_oak_log_stairs": "Обтёсанные ступеньки из тёмного дуба"
+}
