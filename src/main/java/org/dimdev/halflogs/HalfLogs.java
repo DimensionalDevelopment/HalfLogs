@@ -17,6 +17,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.SlabType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -26,7 +27,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class HalfLogs implements BlockAdder, ItemAdder {
-    public static final EnumProperty<EnumFacing.Axis> AXIS = EnumProperty.create("axis", EnumFacing.Axis.class);
+    public static final EnumProperty<EnumFacing.Axis> AXIS = BlockStateProperties.AXIS;
 
     private static BlockStairs createLogStairs(Block log) {
         return new BlockStairs(log.getDefaultState(), Block.Properties.from(log)) {
